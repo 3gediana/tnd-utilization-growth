@@ -1,0 +1,226 @@
+{
+  "stage": "S6-B2-confirm",
+  "stage_part": "combined-3seed-verdict",
+  "hypothesis": "H_B2（D13 预注册）：v2 统一稳定化 + D11 seed 语义下，只长臂 B2−B0 跨训练流稳定 ≥0，时延增幅 ≤20%",
+  "seed_semantics": "D11 方案 A：训练流重采样（RandomState(seed) 固定置换逐 epoch 同序）+ 每 seed 全链重探针重选候选",
+  "primary_comparison": "B2_minus_B0",
+  "seeds_preregistered": [
+    45,
+    46,
+    47
+  ],
+  "seeds_completed": [
+    45,
+    46,
+    47
+  ],
+  "seeds_missing": [],
+  "seeds_gate_not_triggered": [],
+  "seeds_failed": [],
+  "per_seed": {
+    "45": {
+      "seed": 45,
+      "B0_mean": 0.7036764705882352,
+      "B1_mean": 0.7922794117647058,
+      "B2_mean": 0.91875,
+      "B3_mean": 0.8150735294117647,
+      "mean_diff_B2_minus_B0": 0.21507352941176472,
+      "mean_diff_pp_B2_minus_B0": 21.51,
+      "direction_positive_B2": true,
+      "latency_increase_pct_B2": -8.33,
+      "latency_ok_B2": true,
+      "latency_increase_pct_B3_descriptive": -29.37,
+      "gate": {
+        "dissociation_ratio_hidden": 0.20418848167539266,
+        "dissociation_count_hidden": 117,
+        "prune_candidates": 803,
+        "growth_candidates": 10,
+        "stage_b_trigger": true
+      },
+      "k_used": 10,
+      "edge_conservation_net_B3": 0,
+      "pairing_integrity": {
+        "same_batch_order_across_arms": true,
+        "order_equals_randomstate_seed_perm": true,
+        "steps_all_190": true,
+        "same_episode_table_across_arms": true,
+        "episode_table_2026_2035": true,
+        "k_used_is_10": true,
+        "valid": true
+      }
+    },
+    "46": {
+      "seed": 46,
+      "B0_mean": 0.7029411764705882,
+      "B1_mean": 0.8165441176470589,
+      "B2_mean": 0.9077205882352942,
+      "B3_mean": 0.7911764705882354,
+      "mean_diff_B2_minus_B0": 0.20477941176470604,
+      "mean_diff_pp_B2_minus_B0": 20.48,
+      "direction_positive_B2": true,
+      "latency_increase_pct_B2": 4.62,
+      "latency_ok_B2": true,
+      "latency_increase_pct_B3_descriptive": 19.7,
+      "gate": {
+        "dissociation_ratio_hidden": 0.19895287958115182,
+        "dissociation_count_hidden": 114,
+        "prune_candidates": 978,
+        "growth_candidates": 10,
+        "stage_b_trigger": true
+      },
+      "k_used": 10,
+      "edge_conservation_net_B3": 0,
+      "pairing_integrity": {
+        "same_batch_order_across_arms": true,
+        "order_equals_randomstate_seed_perm": true,
+        "steps_all_190": true,
+        "same_episode_table_across_arms": true,
+        "episode_table_2026_2035": true,
+        "k_used_is_10": true,
+        "valid": true
+      }
+    },
+    "47": {
+      "seed": 47,
+      "B0_mean": 0.4160130718954248,
+      "B1_mean": 0.4330065359477125,
+      "B2_mean": 0.47785947712418303,
+      "B3_mean": 0.5599264705882353,
+      "mean_diff_B2_minus_B0": 0.06184640522875823,
+      "mean_diff_pp_B2_minus_B0": 6.18,
+      "direction_positive_B2": true,
+      "latency_increase_pct_B2": 46.14,
+      "latency_ok_B2": false,
+      "latency_increase_pct_B3_descriptive": 44.98,
+      "gate": {
+        "dissociation_ratio_hidden": 0.19197207678883071,
+        "dissociation_count_hidden": 110,
+        "prune_candidates": 1052,
+        "growth_candidates": 10,
+        "stage_b_trigger": true
+      },
+      "k_used": 10,
+      "edge_conservation_net_B3": 0,
+      "pairing_integrity": {
+        "same_batch_order_across_arms": true,
+        "order_equals_randomstate_seed_perm": true,
+        "steps_all_190": true,
+        "same_episode_table_across_arms": true,
+        "episode_table_2026_2035": true,
+        "k_used_is_10": true,
+        "valid": true
+      }
+    }
+  },
+  "combined": {
+    "mean_diff_pp_B2_minus_B0": 16.06,
+    "mean_diff_seedavg_pp_B2_minus_B0": 16.06,
+    "n_episode_pairs": 30,
+    "n_seeds_positive_B2": 3,
+    "n_seeds_with_stage_b": 3,
+    "all_latency_within_20pct_B2": false
+  },
+  "latency_boundary_flags_B2": [
+    {
+      "seed": 45,
+      "latency_increase_pct_b2": -8.33,
+      "over_20pct_b2": false,
+      "no_gain_b2": false
+    },
+    {
+      "seed": 46,
+      "latency_increase_pct_b2": 4.62,
+      "over_20pct_b2": false,
+      "no_gain_b2": false
+    },
+    {
+      "seed": 47,
+      "latency_increase_pct_b2": 46.14,
+      "over_20pct_b2": true,
+      "no_gain_b2": false
+    }
+  ],
+  "forest_arm_x_seed": {
+    "rows": [
+      {
+        "seed": 45,
+        "arm": "B1_prune_only",
+        "mean_catch": 0.7922794117647058,
+        "paired_diff_vs_B0_pp": 8.86
+      },
+      {
+        "seed": 45,
+        "arm": "B2_grow_only",
+        "mean_catch": 0.91875,
+        "paired_diff_vs_B0_pp": 21.51
+      },
+      {
+        "seed": 45,
+        "arm": "B3_prune_grow",
+        "mean_catch": 0.8150735294117647,
+        "paired_diff_vs_B0_pp": 11.14
+      },
+      {
+        "seed": 46,
+        "arm": "B1_prune_only",
+        "mean_catch": 0.8165441176470589,
+        "paired_diff_vs_B0_pp": 11.36
+      },
+      {
+        "seed": 46,
+        "arm": "B2_grow_only",
+        "mean_catch": 0.9077205882352942,
+        "paired_diff_vs_B0_pp": 20.48
+      },
+      {
+        "seed": 46,
+        "arm": "B3_prune_grow",
+        "mean_catch": 0.7911764705882354,
+        "paired_diff_vs_B0_pp": 8.82
+      },
+      {
+        "seed": 47,
+        "arm": "B1_prune_only",
+        "mean_catch": 0.4330065359477125,
+        "paired_diff_vs_B0_pp": 1.7
+      },
+      {
+        "seed": 47,
+        "arm": "B2_grow_only",
+        "mean_catch": 0.47785947712418303,
+        "paired_diff_vs_B0_pp": 6.18
+      },
+      {
+        "seed": 47,
+        "arm": "B3_prune_grow",
+        "mean_catch": 0.5599264705882353,
+        "paired_diff_vs_B0_pp": 14.39
+      }
+    ],
+    "note": "臂 × seed 配对差（vs B0，pp）：主判决只看 B2 行；B1/B3 行为描述性读数（D13：只记录不判）"
+  },
+  "descriptive_B3_B1": {
+    "B3_minus_B0_pp_per_seed": [
+      11.14,
+      8.82,
+      14.39
+    ],
+    "B1_minus_B0_pp_per_seed": [
+      8.86,
+      11.36,
+      1.7
+    ],
+    "note": "描述性读数，不进判决（D13 拍板①）。若与 S4（B3-B0 −24.08/+1.99/+14.01pp，合并 −2.70pp；B1 合并 −2.4pp）方向矛盾，写入 notes 供判读参考，不改 H_B2 判据。"
+  },
+  "verdict": "inconclusive",
+  "verdict_rule_applied": [
+    "合并 ≥+5pp 但 ≥2/3 方向正或延迟门不满足 → inconclusive"
+  ],
+  "preregistered_criteria_H_B2": {
+    "supported": "≥2/3 seeds B2−B0>0 且合并 ≥0 且 B2 延迟增幅 ≤20%（合并 ≥+5pp 强支持）",
+    "falsified": "合并 <-5pp；或任一 seed B2 延迟 >20% 且无增益",
+    "inconclusive": "合并 ∈ (-5pp,0] 或 (0,+5pp)",
+    "failure_routing": "合并 <-5pp → 回判读在「剪枝规则修正重跑」与「如实收线记负结果」间拍板；≥2 seeds 不过解离门 → 回 researcher（工作点敏感性）；≥2 seeds failed → 回 researcher"
+  },
+  "disclosure": "新种子 45/46/47 未被任何在盘实验消费过（D13 反循环：假设生成数据 41/43/44 不复用）。评测局表 2026..2035 固定跨 seed（D11 拍板），评测轴约 9.3pp 潜在摆幅未被 seed 覆盖；若 verdict=supported 须带幅度限定。边界声明（D9）：结论限定「统一稳定化（v2）扰动后的恢复学习」，不外推到原生 checkpoint 事后修复。"
+}

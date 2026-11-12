@@ -1,0 +1,4 @@
+# 本仓库只需要 CPU 版 PyTorch；没有 pygame / sklearn / 游戏窗口依赖。
+# 实测环境：Python 3.11.9 + torch 2.10.0（CPU，4 线程），Windows 11。
+torch>=2.0
+numpy>=1.24
